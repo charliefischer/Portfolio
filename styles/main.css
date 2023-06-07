@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'InstrumentSans';
+  src: url('../asset/InstrumentSans[wdth\,wght].ttf');
+}
+
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-family: 'InstrumentSans';
+  font-size: calc(100vw / 8);
+  white-space: nowrap;
+  color: rgb(15, 15, 27);;
+}
+
+p {
+  font-family: 'InstrumentSans';
+  text-align: center;
+  color: rgb(15, 15, 27);;
+}
+
+.tween {
+  font-variation-settings: "wdth" 75;
+}
+
+.empty {
+  height: 300vh;
+}
