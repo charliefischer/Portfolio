@@ -30,3 +30,9 @@ p {
 .empty {
   height: 300vh;
 }
+
+.jobs-titles-grid span {
+    font-family: 'InstrumentSans';
+    font-size: calc(100vw / 10/ 2);
+  }
+
