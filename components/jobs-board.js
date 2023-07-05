@@ -47,7 +47,7 @@ export default function JobsBoard({ preview, cmsContent }) {
   ];
   return (
     <>
-        <div className="jobs-titles-grid flex flex-wrap justify-between">
+        <div className="jobs-titles-grid flex flex-wrap justify-between max-h-[100vh] overflow-hidden">
           {jobList.map((job) => (
             <span
               key={job}

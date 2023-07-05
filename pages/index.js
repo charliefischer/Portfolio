@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Layout from "../components/layout";
 import { getHomePageContent } from "../lib/api";
 import JobsBoard from "../components/jobs-board"
+import Banner from "../components/banner";
 
 export default function Index({ preview, cmsContent }) {
   // useEffect(() => {
@@ -19,6 +20,7 @@ export default function Index({ preview, cmsContent }) {
   return (
     <>
       <Layout preview={preview}>
+        <Banner />  
         <JobsBoard />
       </Layout>
     </>

@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'InstrumentSans';
-  src: url('../asset/InstrumentSans[wdth\,wght].ttf');
+  font-family: "InstrumentSans";
+  src: url("../asset/InstrumentSans[wdth\,wght].ttf");
 }
 
 .wrapper {
@@ -11,16 +11,16 @@
 }
 
 h1 {
-  font-family: 'InstrumentSans';
+  font-family: "InstrumentSans";
   font-size: calc(100vw / 8);
   white-space: nowrap;
-  color: rgb(15, 15, 27);;
+  color: rgb(15, 15, 27);
 }
 
 p {
-  font-family: 'InstrumentSans';
+  font-family: "InstrumentSans";
   text-align: center;
-  color: rgb(15, 15, 27);;
+  color: rgb(15, 15, 27);
 }
 
 .tween {
@@ -31,8 +31,22 @@ p {
   height: 300vh;
 }
 
-.jobs-titles-grid span {
-    font-family: 'InstrumentSans';
-    font-size: calc(100vw / 10/ 2);
-  }
+.banner-text {
+  font-family: "InstrumentSans";
+}
 
+.jobs-titles-grid span {
+  font-family: "InstrumentSans";
+  font-size: calc(100vw / 5 / 2);
+}
+
+@media screen and (min-width: 600px) {
+  .jobs-titles-grid span {
+    font-size: calc(100vw / 6 / 2);
+  }
+}
+@media screen and (min-width: 900px) {
+  .jobs-titles-grid span {
+    font-size: calc(100vw / 10 / 2);
+  }
+}
