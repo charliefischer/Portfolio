@@ -1,23 +1,20 @@
 import Layout from "../components/layout";
 import { getHomePageContent } from "../lib/api";
-import Crazy from "../components/creative-coding/crazy";
-import Zipper from "../components/creative-coding/zipper";
-import Whirl from "../components/creative-coding/whirl";
-import Delay from "../components/creative-coding/delay";
-import Sticks from "../components/creative-coding/sticks";
 import Grid from "../components/creative-coding/grid";
+import Banner from "../components/banner";
 
 export default function CreativeCoding({ preview, cmsContent }) {
   return (
     <>
-      <Layout preview={preview} classes="overflow-x-hidden" colour="red-500">
-        <h1>Creative Coding</h1>
-        <h3>
+      <Layout preview={preview} classes="overflow-x-hidden">
+        <h1 className="mx-auto text-center">Creative Coding</h1>
+        <h3 className="max-w-[80%] mx-auto">
           These are all examples based on the learning fromm a creative coding
           course I enrolled in with SuperHi. It utilises the Two.js library to
           allow for svg/canvas drawing
         </h3>
         <Grid />
+        <Banner /> 
       </Layout>
     </>
   );

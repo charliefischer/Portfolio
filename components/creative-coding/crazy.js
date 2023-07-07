@@ -12,8 +12,8 @@ export default function Crazy() {
     if (document.querySelector("section.crazy path")) return;
 
     const params = {
-      width: 500,
-      height: 500,
+      width: 400,
+      height: 400,
     };
 
     const two = new Two(params);
@@ -31,7 +31,7 @@ export default function Crazy() {
     // make shapes
     for (let i = 0; i < numberOfShapes; i++) {
       const size = (numberOfShapes - i) * shapeIncr;
-      const shape = two.makeRectangle(250, 250, size, size);
+      const shape = two.makeRectangle(200, 200, size, size);
       shape.fill = i % 2 === 0 ? outerColour : innerColour;
       shape.noStroke();
       shapes.push(shape);

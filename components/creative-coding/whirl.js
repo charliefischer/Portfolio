@@ -6,7 +6,7 @@ export default function Whirl() {
   useEffect(() => {
     if (document.querySelector("section.whirl path")) return;
     const container = document.querySelector("section.whirl");
-    const params = { width: 500, height: 500 };
+    const params = { width: 400, height: 400 };
 
     const two = new Two(params);
     two.appendTo(container);
@@ -32,7 +32,7 @@ export default function Whirl() {
     }
 
     const group = two.makeGroup(shapes);
-    group.translation.set(250, 250);
+    group.translation.set(200, 200);
 
     two.bind("update", function () {
       group.rotation += 0.005;

@@ -11,8 +11,8 @@ export default function Zipper() {
     const container = document.querySelector("section.zipper");
 
     const params = {
-      width: 500,
-      height: 500,
+      width: 400,
+      height: 400,
     };
     const two = new Two(params);
     two.appendTo(container);
@@ -21,7 +21,7 @@ export default function Zipper() {
     const numberOfShapes = 25;
     const shapes = [];
     const shapeMin = 0;
-    const shapeMax = 500;
+    const shapeMax = 400;
     const shapeDiff = shapeMax - shapeMin;
     const loopDuration = 4 * 60;
     const zipperColour = "#57CC99";
