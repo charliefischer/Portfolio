@@ -39,7 +39,8 @@ p {
   font-family: "InstrumentSans";
 }
 
-.jobs-titles-grid span {
+.jobs-titles-grid span,
+.jobs-titles-grid a {
   font-family: "InstrumentSans";
   font-size: calc(100vw / 5 / 2);
 }
@@ -48,13 +49,22 @@ p {
   cursor: none;
 }
 
+.custom-cursor {
+  transition: transform 0.4s;
+}
+.custom-cursor.grow {
+  transform: scale(2);
+}
+
 @media screen and (min-width: 600px) {
-  .jobs-titles-grid span {
+  .jobs-titles-grid span,
+  .jobs-titles-grid a {
     font-size: calc(100vw / 6 / 2);
   }
 }
 @media screen and (min-width: 900px) {
-  .jobs-titles-grid span {
+  .jobs-titles-grid span,
+  .jobs-titles-grid a {
     font-size: calc(100vw / 10 / 2);
   }
 }

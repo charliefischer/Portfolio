@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getHomePageContent } from "../lib/api";
 
 export default function JobsBoard({ preview, cmsContent }) {
@@ -48,7 +49,15 @@ export default function JobsBoard({ preview, cmsContent }) {
   return (
     <>
         <div className="jobs-titles-grid flex flex-wrap justify-between max-h-[100vh] overflow-hidden">
-          {jobList.map((job) => (
+          {jobList.map((job) => {
+            if(job === "Web Developer"){
+              return (
+                <Link href="/creative-coding" key={job}
+                className="text-[#F17B0D]">
+                  {job}
+                </Link>
+              )
+            } else return(
             <span
               key={job}
               className={`${previousJobs[job] ? "text-[#F17B0D]" : ""} ${
@@ -59,7 +68,7 @@ export default function JobsBoard({ preview, cmsContent }) {
             >
               {job}
             </span>
-          ))}
+          )})}
         </div>
     </>
   );

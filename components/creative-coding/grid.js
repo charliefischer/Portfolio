@@ -23,7 +23,7 @@ export default function Grid() {
     return () => {
       document
         .querySelector(".creative-coding-wrappers")
-        .removeEventListener("scroll", scrollHandler);
+        ?.removeEventListener("scroll", scrollHandler);
     };
   });
   let activeIndex = 0;
