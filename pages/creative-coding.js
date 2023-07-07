@@ -10,7 +10,7 @@ import Grid from "../components/creative-coding/grid";
 export default function CreativeCoding({ preview, cmsContent }) {
   return (
     <>
-      <Layout preview={preview} classes="overflow-x-hidden">
+      <Layout preview={preview} classes="overflow-x-hidden" colour="red-500">
         <h1>Creative Coding</h1>
         <h3>
           These are all examples based on the learning fromm a creative coding
@@ -18,23 +18,6 @@ export default function CreativeCoding({ preview, cmsContent }) {
           allow for svg/canvas drawing
         </h3>
         <Grid />
-        {/* <section className="creative-coding-wrappers flex flex-nowrap overflow-auto snap-x">
-          <div className="mr-[24px]">
-            <Crazy />
-          </div>
-          <div className="mr-[24px]">
-            <Zipper />
-          </div>
-          <div className="mr-[24px]">
-            <Whirl />
-          </div>
-          <div className="mr-[24px]">
-            <Sticks />
-          </div>
-          <div className="mr-[24px]">
-            <Delay />
-          </div>
-        </section> */}
       </Layout>
     </>
   );

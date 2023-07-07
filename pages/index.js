@@ -19,7 +19,7 @@ export default function Index({ preview, cmsContent }) {
   // });
   return (
     <>
-      <Layout preview={preview}>
+      <Layout preview={preview} colour="orange-main">
         <Banner />  
         <JobsBoard />
       </Layout>

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "InstrumentSans";
   src: url("../asset/InstrumentSans[wdth\,wght].ttf");
@@ -38,6 +42,10 @@ p {
 .jobs-titles-grid span {
   font-family: "InstrumentSans";
   font-size: calc(100vw / 5 / 2);
+}
+
+* {
+  cursor: none;
 }
 
 @media screen and (min-width: 600px) {
