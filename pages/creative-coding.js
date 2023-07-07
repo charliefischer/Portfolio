@@ -10,7 +10,7 @@ import Grid from "../components/creative-coding/grid";
 export default function CreativeCoding({ preview, cmsContent }) {
   return (
     <>
-      <Layout preview={preview}>
+      <Layout preview={preview} classes="overflow-x-hidden">
         <h1>Creative Coding</h1>
         <h3>
           These are all examples based on the learning fromm a creative coding
