@@ -37,7 +37,7 @@ export default function Grid() {
   const components = [<Crazy />, <Zipper />, <Whirl />, <Sticks />, <Delay />];
   return (
     <section className="creative-coding-wrappers relative my-[120px]">
-      <div
+      <a
         className="arrow right absolute top-[50%] right-[10%] z-10 cursor-pointer"
         onClick={() => moveTo(true)}
       >
@@ -46,7 +46,7 @@ export default function Grid() {
           fill="none"
           viewBox="0 0 28 28"
           width="32px"
-          className=""
+          className="button"
         >
           <path
             fill="#000"
@@ -57,8 +57,8 @@ export default function Grid() {
             d="m20.9 13.6-.2-.3-4-4a1 1 0 0 0-1.4 0 1 1 0 0 0 0 1.4l2.3 2.3H7c-.6 0-1 .4-1 1s.4 1 1 1h10.6l-2.3 2.3a1 1 0 0 0 0 1.4c.2.2.5.3.7.3.2 0 .5-.1.7-.3l4-4 .2-.3c.1-.3.1-.5 0-.8Z"
           />
         </svg>
-      </div>
-      <div
+      </a>
+      <a
         className="arrow left absolute top-[50%] left-[10%] z-10 rotate-180 cursor-pointer"
         onClick={() => moveTo()}
       >
@@ -67,6 +67,7 @@ export default function Grid() {
           fill="none"
           viewBox="0 0 28 28"
           width="32px"
+          className="button"
         >
           <path
             fill="#000"
@@ -77,7 +78,7 @@ export default function Grid() {
             d="m20.9 13.6-.2-.3-4-4a1 1 0 0 0-1.4 0 1 1 0 0 0 0 1.4l2.3 2.3H7c-.6 0-1 .4-1 1s.4 1 1 1h10.6l-2.3 2.3a1 1 0 0 0 0 1.4c.2.2.5.3.7.3.2 0 .5-.1.7-.3l4-4 .2-.3c.1-.3.1-.5 0-.8Z"
           />
         </svg>
-      </div>
+      </a>
       <div className="coding-container flex flex-nowrap snap-x relative left-[0px] transition-transform duration-[800ms] transform overflow-hiddenn">
         {components.map((comp, i) => {
           return (

@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import Alert from "../components/alert";
-import Footer from "../components/footer";
 import Meta from "../components/meta";
 import CustomCursor from "./custom-cursor";
 
