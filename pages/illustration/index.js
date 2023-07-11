@@ -1,18 +1,23 @@
+import Banner from "../../components/banner";
 import IllustrationGrid from "../../components/illustration-grid";
 import Layout from "../../components/layout";
-import { getIllustrationContent } from "../../lib/api";
-export default function Illustration({cmsContent}){
-  console.log(cmsContent)
+import { getIllustrationNavigationContent } from "../../lib/api";
+import Navigation from "../../components/navigation";
+export default function Illustration({ cmsContent }) {
   return (
-    <Layout>
-      <h1 className="text-center">Illustration</h1>
-      <IllustrationGrid contents={cmsContent} />
-    </Layout>
-  )
+    <>
+      <Navigation />
+      <Layout>
+        <h1 className="text-center">Illustration</h1>
+        <IllustrationGrid contents={cmsContent} />
+      </Layout>
+      <Banner />
+    </>
+  );
 }
 
 export async function getStaticProps({ preview = false }) {
-  const cmsContent = await getIllustrationContent(preview);
+  const cmsContent = await getIllustrationNavigationContent(preview);
   return {
     props: { preview, cmsContent: cmsContent?.content ?? null },
   };
