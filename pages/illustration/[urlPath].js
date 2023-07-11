@@ -10,11 +10,11 @@ export default function IllustrationPage({ cmsContent }) {
     <>
       <Navigation />
       <Layout>
-        <h1 className="text-center">{cmsContent.title}</h1>
+        <h1 className="text-center">{cmsContent?.title}</h1>
         <div className="flex justify-center">
           <div className="flex justify-center max-w-[min(780px,100%)] max-h-[90vh]">
             <img
-              src={cmsContent.mainImage.url}
+              src={cmsContent?.mainImage.url}
               className="w-[100%] object-contain"
             />
           </div>
