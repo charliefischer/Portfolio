@@ -9,18 +9,12 @@ export default function CustomCursor({ colour = "black" }) {
       const cursor = document.querySelector(".custom-cursor");
       cursor.style.left = `${event.clientX}px`;
       cursor.style.top = `${event.clientY}px`;
-      console.log(
-        event.target.className.baseVal,
-        event.target.className.baseVal === "button" &&
-          !cursor.classList.contains("grow")
-      );
       if (
         (event.target.tagName === "A" && !cursor.classList.contains("grow")) ||
         (event.target.className.baseVal === "button" &&
           !cursor.classList.contains("grow"))
       ) {
         cursor.classList.add("grow");
-        console.log(cursor)
       }
       if (event.target.tagName !== "A" && !event.target.classList.contains("button")) {
         cursor.classList.remove("grow");

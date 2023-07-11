@@ -22,6 +22,7 @@ export default function Index({ preview, cmsContent }) {
       <Layout preview={preview} colour="orange-main">
         <Banner />  
         <JobsBoard />
+        {/* {cmsContent} */}
       </Layout>
     </>
   );

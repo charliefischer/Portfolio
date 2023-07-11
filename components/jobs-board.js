@@ -57,6 +57,13 @@ export default function JobsBoard({ preview, cmsContent }) {
                   {job}
                 </Link>
               )
+            } else if (job === "Illustrator") {
+              return (
+                <Link href="/illustration" key={job}
+                className="text-[#F17B0D]">
+                  {job}
+                </Link>
+              )
             } else return(
             <span
               key={job}
