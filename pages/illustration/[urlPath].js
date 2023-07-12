@@ -22,7 +22,11 @@ export default function IllustrationPage({ cmsContent }) {
           </div>
           {supportingImages?.map((img) => (
             <div className="flex justify-center max-w-[min(780px,100%)] max-h-[90vh] mb-8">
-              <img src={img.url} className="w-[100%] object-contain" />
+              <img
+                src={img.url}
+                loading="lazy"
+                className="w-[100%] object-contain"
+              />
             </div>
           ))}
         </div>
