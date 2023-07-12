@@ -11,7 +11,8 @@ export default function IllustrationPage({ cmsContent }) {
       <Navigation />
       <Layout>
         <h1 className="text-center">{cmsContent?.title}</h1>
-        <div className="flex justify-center">
+        <div className="flex flex-col justify-center items-center">
+          <p className="max-w-[90%] mb-8">{cmsContent?.description}</p>
           <div className="flex justify-center max-w-[min(780px,100%)] max-h-[90vh]">
             <img
               src={cmsContent?.mainImage.url}
