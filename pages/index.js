@@ -1,11 +1,11 @@
 import Layout from "../components/layout";
-import { getHomePageContent } from "../lib/api";
+import { getHomePageContent, getIllustrationNavigationContent } from "../lib/api";
 import JobsBoard from "../components/jobs-board";
 import Banner from "../components/banner";
 import SiteSelector from "../components/site-selector";
 import { useEffect } from "react";
 
-export default function Index({ preview, cmsContent }) {
+export default function Index({ preview, cmsContent, illoCmsContent }) {
   useEffect(() => {
     const h1 = document.querySelector("#title");
     const tween = document.querySelector(".tween");
@@ -22,10 +22,13 @@ export default function Index({ preview, cmsContent }) {
     <>
       <Layout preview={preview} colour="orange-main">
         <Banner />
-        <h2 className="text-center fixed left-[50%] translate-x-[-50%] z-[1]" id="#title">
+        <h2
+          className="text-center fixed left-[50%] translate-x-[-50%] z-[1]"
+          id="#title"
+        >
           Charlie Fischer
         </h2>
-        <SiteSelector />
+        <SiteSelector illoCmsContent={illoCmsContent} />
         {/* <JobsBoard /> */}
         {/* {cmsContent} */}
       </Layout>
@@ -35,7 +38,13 @@ export default function Index({ preview, cmsContent }) {
 
 export async function getStaticProps({ preview = false }) {
   const cmsContent = await getHomePageContent(preview);
+  const illoCmsContent = await getIllustrationNavigationContent(preview);
+
   return {
-    props: { preview, cmsContent: cmsContent?.content?.[0] ?? null },
+    props: {
+      preview,
+      cmsContent: cmsContent?.content?.[0] ?? null,
+      illoCmsContent: illoCmsContent?.content ?? null,
+    },
   };
 }

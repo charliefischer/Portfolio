@@ -3,7 +3,7 @@ import IllustrationGrid from "../../components/illustration-grid";
 import Layout from "../../components/layout";
 import { getIllustrationNavigationContent } from "../../lib/api";
 import Navigation from "../../components/navigation";
-export default function Illustration({ cmsContent }) {
+export default function Illustration({ illoCmsContent }) {
   return (
     <>
       <Navigation />
@@ -17,8 +17,8 @@ export default function Illustration({ cmsContent }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const cmsContent = await getIllustrationNavigationContent(preview);
+  const illoCmsContent = await getIllustrationNavigationContent(preview);
   return {
-    props: { preview, cmsContent: cmsContent?.content ?? null },
+    props: { preview, cmsContent: illoCmsContent?.content ?? null },
   };
 }

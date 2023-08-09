@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function IllustrationGrid({ contents }) {
   return (
     <div className="flex flex-wrap justify-center">
-      {contents.map((illo) => {
+      {contents?.map((illo) => {
         return (
           <Link
             href={`/illustration/${illo.urlPath}`}
@@ -17,6 +17,9 @@ export default function IllustrationGrid({ contents }) {
           </Link>
         );
       })}
+      {!contents && (
+        <div>conttents</div>
+      )}
     </div>
   );
 }

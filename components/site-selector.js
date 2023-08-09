@@ -1,9 +1,11 @@
 import { useState } from "react";
+import IllustrationGrid from "./illustration-grid";
+import WebDevGrid from "./web-dev-grid";
+let elementClicked = false;
 
-export default function SiteSelector(props) {
+export default function SiteSelector({ illoCmsContent }) {
   let [leftValue, setLeftValue] = useState(-50);
   let [hoveredOption, setHoveredOption] = useState(false);
-  let elementClicked = false;
   const handleHover = (el = false, leftV = -50) => {
     if (elementClicked) return;
     setHoveredOption(el);
@@ -11,6 +13,10 @@ export default function SiteSelector(props) {
   };
   const handleCLick = (el) => {
     elementClicked = !elementClicked;
+    if (el && hoveredOption === el) {
+      if (el === "web") setLeftValue(-100);
+      if (el === "illo") setLeftValue(0);
+    }
   };
   return (
     <div className="fixed flex flex-col md:flex-row justify-evenly w-[100%]">
@@ -21,6 +27,8 @@ export default function SiteSelector(props) {
           right: leftValue + 100 + "%",
         }}
       />
+      <IllustrationGrid contents={illoCmsContent} />
+      <WebDevGrid contents={[1, 2, 3]} />
       <div
         onMouseEnter={() => handleHover("illo", -20)}
         onMouseLeave={() => handleHover()}
@@ -38,7 +46,12 @@ export default function SiteSelector(props) {
         onClick={() => handleCLick("web")}
         className="absolute transition-all translate-x-[50%]"
         style={{
-          right: hoveredOption === "illo" ? "10%" : "25%",
+          right:
+            hoveredOption === "illo"
+              ? elementClicked
+                ? "-10%"
+                : "10%"
+              : "25%",
         }}
       >
         Web Developer
