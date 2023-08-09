@@ -1,8 +1,8 @@
-import { useEffect } from "react";
 import Layout from "../components/layout";
 import { getHomePageContent } from "../lib/api";
 import JobsBoard from "../components/jobs-board"
 import Banner from "../components/banner";
+import SiteSelector from "../components/site-selector";
 
 export default function Index({ preview, cmsContent }) {
   // useEffect(() => {
@@ -21,7 +21,9 @@ export default function Index({ preview, cmsContent }) {
     <>
       <Layout preview={preview} colour="orange-main">
         <Banner />  
-        <JobsBoard />
+        <h2 className="text-center">Charlie Fischer</h2>
+        <SiteSelector />
+        {/* <JobsBoard /> */}
         {/* {cmsContent} */}
       </Layout>
     </>
