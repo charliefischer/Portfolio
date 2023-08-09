@@ -13,9 +13,9 @@ export default function SiteSelector(props) {
     elementClicked = !elementClicked;
   };
   return (
-    <div className="flex flex-col md:flex-row justify-evenly w-[100%]">
+    <div className="fixed flex flex-col md:flex-row justify-evenly w-[100%]">
       <div
-        className={`bg-[#F17B0D] fixed w-[100vw] h-[100%] z-[-1] transition-all duration-[400ms]`}
+        className={`bg-[#F17B0D] fixed w-[100vw] h-[100%] transition-all duration-[400ms]`}
         style={{
           left: leftValue + "%",
           right: leftValue + 100 + "%",
