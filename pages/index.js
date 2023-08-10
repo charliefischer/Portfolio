@@ -9,15 +9,23 @@ export default function Index({ preview, cmsContent, illoCmsContent }) {
   useEffect(() => {
     const h1 = document.querySelector("#title");
     const tween = document.querySelector(".tween");
-    window.addEventListener("scroll", (e) => {
+  
+    const scrollHandler = (e) => {
       const pixels = window.pageYOffset ?? window.scrollY;
       const fontWeight = pixels * 0.4 + 150;
       // const fontWidth = pixels * 0.05 + 25
       h1.style.fontVariationSettings = `"wdth" ${fontWeight}`;
       // tween.style.fontVariationSettings = `"wght" ${ fontWeight }, "wdth" ${ fontWidth }`
       // , "wdth" ${fontWidth}
-    });
-  });
+    };
+  
+    window.addEventListener("scroll", scrollHandler);
+  
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
   return (
     <>
       <Layout preview={preview} colour="orange-main">

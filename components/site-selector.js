@@ -27,13 +27,19 @@ export default function SiteSelector({ illoCmsContent }) {
           right: leftValue + 100 + "%",
         }}
       />
-      <IllustrationGrid
-        contents={illoCmsContent}
-        styleObj={{
-          left: leftValue + 100 +"%",
-        }}
-      />
-      <WebDevGrid contents={[1, 2, 3]} />
+      <div
+        style={{ left: leftValue + 100 + "%" }}
+        className="fixed transition-all duration-[400ms] w-[90%] mx-[5%] mt-[32px]"
+      >
+        <IllustrationGrid contents={illoCmsContent} />
+      </div>
+      <div style={{
+        left: leftValue + "%"
+      }} className="fixed transition-all duration-[400ms] w-[90%] mx-[5%] mt-[32px]">
+        <WebDevGrid
+          contents={[1, 2, 3]}
+        />
+      </div>
       <div
         onMouseEnter={() => handleHover("web", -20)}
         onMouseLeave={() => handleHover()}
