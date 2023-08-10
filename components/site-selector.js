@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import IllustrationGrid from "./illustration-grid";
 import WebDevGrid from "./web-dev-grid";
 let elementClicked = false;
@@ -18,6 +18,11 @@ export default function SiteSelector({ illoCmsContent }) {
       if (el === "web") setLeftValue(0);
     }
   };
+  useEffect(() => {
+    return () => {
+      elementClicked = false;
+    };
+  }, []);
   return (
     <div className="fixed flex flex-col md:flex-row justify-evenly w-[100%]">
       <div
@@ -33,12 +38,13 @@ export default function SiteSelector({ illoCmsContent }) {
       >
         <IllustrationGrid contents={illoCmsContent} />
       </div>
-      <div style={{
-        left: leftValue + "%"
-      }} className="fixed transition-all duration-[400ms] w-[90%] mx-[5%] mt-[32px]">
-        <WebDevGrid
-          contents={[1, 2, 3]}
-        />
+      <div
+        style={{
+          left: leftValue + "%",
+        }}
+        className="fixed transition-all duration-[400ms] w-[90%] mx-[5%] mt-[32px]"
+      >
+        <WebDevGrid contents={[1, 2, 3]} />
       </div>
       <div
         onMouseEnter={() => handleHover("web", -20)}
