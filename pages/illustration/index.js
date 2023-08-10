@@ -19,6 +19,6 @@ export default function Illustration({ illoCmsContent }) {
 export async function getStaticProps({ preview = false }) {
   const illoCmsContent = await getIllustrationNavigationContent(preview);
   return {
-    props: { preview, cmsContent: illoCmsContent?.content ?? null },
+    props: { preview, illoCmsContent: illoCmsContent?.content ?? null },
   };
 }
