@@ -14,8 +14,8 @@ export default function SiteSelector({ illoCmsContent }) {
   const handleCLick = (el) => {
     elementClicked = !elementClicked;
     if (el && hoveredOption === el) {
-      if (el === "web") setLeftValue(-100);
-      if (el === "illo") setLeftValue(0);
+      if (el === "illo") setLeftValue(-100);
+      if (el === "web") setLeftValue(0);
     }
   };
   return (
@@ -27,34 +27,35 @@ export default function SiteSelector({ illoCmsContent }) {
           right: leftValue + 100 + "%",
         }}
       />
-      <IllustrationGrid contents={illoCmsContent} />
+      <IllustrationGrid
+        contents={illoCmsContent}
+        styleObj={{
+          left: leftValue + 100 +"%",
+        }}
+      />
       <WebDevGrid contents={[1, 2, 3]} />
       <div
-        onMouseEnter={() => handleHover("illo", -20)}
-        onMouseLeave={() => handleHover()}
-        onClick={() => handleCLick("illo")}
-        className="absolute transition-all translate-x-[-50%]"
-        style={{
-          left: hoveredOption === "web" ? leftValue + 90 + "%" : "25%",
-        }}
-      >
-        Illustrator
-      </div>
-      <div
-        onMouseEnter={() => handleHover("web", -80)}
+        onMouseEnter={() => handleHover("web", -20)}
         onMouseLeave={() => handleHover()}
         onClick={() => handleCLick("web")}
-        className="absolute transition-all translate-x-[50%]"
+        className="absolute transition-all translate-x-[-50%]"
         style={{
-          right:
-            hoveredOption === "illo"
-              ? elementClicked
-                ? "-10%"
-                : "10%"
-              : "25%",
+          left: hoveredOption === "illo" ? leftValue + 90 + "%" : "25%",
         }}
       >
         Web Developer
+      </div>
+      <div
+        onMouseEnter={() => handleHover("illo", -80)}
+        onMouseLeave={() => handleHover()}
+        onClick={() => handleCLick("illo")}
+        className="absolute transition-all translate-x-[50%]"
+        style={{
+          right:
+            hoveredOption === "web" ? (elementClicked ? "-10%" : "10%") : "25%",
+        }}
+      >
+        Illustrator
       </div>
     </div>
   );

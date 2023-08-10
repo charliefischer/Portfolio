@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function IllustrationGrid({ contents }) {
+export default function IllustrationGrid({ contents, styleObj }) {
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center fixed transition-all duration-[400ms] min-w-[100%]" style={styleObj}>
       {contents?.map((illo) => {
         return (
           <Link
