@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export default function IllustrationGrid({ contents }) {
+export default function IllustrationGrid({ contents, styleObj }) {
   return (
     <div className="flex flex-wrap justify-center">
-      {contents.map((illo) => {
+      {contents?.map((illo) => {
         return (
           <Link
             href={`/illustration/${illo.urlPath}`}

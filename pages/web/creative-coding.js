@@ -1,8 +1,8 @@
-import Layout from "../components/layout";
-import { getHomePageContent } from "../lib/api";
-import Grid from "../components/creative-coding/grid";
-import Banner from "../components/banner";
-import Navigation from "../components/navigation";
+import Layout from "../../components/layout";
+import { getHomePageContent } from "../../lib/api";
+import Grid from "../../components/creative-coding/grid";
+import Banner from "../../components/banner";
+import Navigation from "../../components/navigation";
 
 export default function CreativeCoding({ preview, cmsContent }) {
   return (

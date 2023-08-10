@@ -38,6 +38,9 @@ module.exports = {
       mixBlendMode: {
         difference: 'difference',
       },
+      screens: {
+        mob: "200px"
+      }
     },
   },
   plugins: [],
