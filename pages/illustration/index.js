@@ -9,7 +9,7 @@ export default function Illustration({ illoCmsContent }) {
       <Navigation />
       <Layout>
         <h1 className="text-center">Illustration</h1>
-        <IllustrationGrid contents={cmsContent} />
+        <IllustrationGrid contents={illoCmsContent} />
       </Layout>
       <Banner />
     </>
