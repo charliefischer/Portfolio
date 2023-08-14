@@ -8,8 +8,19 @@ export default function WebDevGrid({ contents, styleObj }) {
       <Link href={`/web/creative-coding`}>
         <Crazy />
       </Link>
-      <Link href={`https://github.com/charliefischer/esoteric-ensembles/`} style={{maxWidth: "min(80%, 400px)"}}>
-        <img src="/web-images/esoteric-ensembles.png"  />
+      <Link
+        target="_blank"
+        href={`https://github.com/charliefischer/esoteric-ensembles/`}
+        style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
+      >
+        <img src="/web-images/esoteric-ensembles.png" className="pointer-events-none" />
+      </Link>
+      <Link
+        target="_blank"
+        href={`https://cf-brux-editor.superhi.hosting/index.html`}
+        style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
+      >
+        <img src="/web-images/brux.png" className="pointer-events-none" />
       </Link>
     </div>
   );
