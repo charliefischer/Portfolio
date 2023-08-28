@@ -15,8 +15,7 @@ export default function SiteSelector({ illoCmsContent }) {
   const handleCLick = (el) => {
     elementClicked = !elementClicked;
     if (el && hoveredOption === el) {
-      if (el === "illo") setLeftValue(-100);
-      if (el === "web") setLeftValue(0);
+      setLeftValue(el === "illo" ? -100 : 0);
     }
   };
   const arrowLeftPostion = hoveredOption && hoveredOption === "illo" ? -10 : 3;
@@ -36,6 +35,7 @@ export default function SiteSelector({ illoCmsContent }) {
         className="fixed top-[14px] z-[6] transition-all duration-[400ms] mob:hidden sm:block"
         style={{
           left: arrowLeftPostion + "%",
+          transform: `rotate(${elementClicked ? 180 : 0}deg)`
         }}
         onMouseEnter={() => handleHover("web", -20)}
         onMouseLeave={() => handleHover()}
@@ -47,6 +47,7 @@ export default function SiteSelector({ illoCmsContent }) {
         className="fixed top-[14px] z-[6] rotate-180 transition-all duration-[400ms] mob:hidden sm:block"
         style={{
           right: arrowRightPosition + "%",
+          transform: `rotate(${elementClicked ? 0 : 180}deg)`
         }}
         onMouseEnter={() => handleHover("illo", -80)}
         onMouseLeave={() => handleHover()}
