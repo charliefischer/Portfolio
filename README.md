@@ -1,4 +1,12 @@
-# A statically generated blog example using Next.js and Contentful
+# Portfolio
+
+## Welcome
+
+This is my software development / illustration portfolio. It's built using Next.js and all (almost) content comes from Contentful! It's a current work in progress so bare with whilst I get it up and running but any bugs or quirks you may come across let me know! 
+
+[Link Here](https://www.charliefischer.co.uk)
+
+<!-- # A statically generated blog example using Next.js and Contentful
 
 This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using [Contentful](https://www.contentful.com/) as the data source.
 
@@ -286,4 +294,4 @@ In your Contentful space, go to **Settings > Webhooks** and add a new webhook:
 
 - **Verify:** You can verify if your request was made successfully by checking the webhook request log on Contentful and checking for a successful 200 status code, or by having your functions tab open on Vercel when committing the change (log drains may also be used). If you are experiencing issues with the api call, ensure you have correctly entered in the value for environment variable `CONTENTFUL_REVALIDATE_SECRET` within your Vercel deployment.
 
-  ![Content successful request](./docs/content-successful-request.png)
+  ![Content successful request](./docs/content-successful-request.png) -->
