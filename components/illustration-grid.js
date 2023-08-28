@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function IllustrationGrid({ contents, styleObj }) {
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center h-min">
       {contents?.map((illo) => {
         return (
           <Link
