@@ -4,9 +4,9 @@ import Crazy from "./creative-coding/crazy";
 
 export default function WebDevGrid({ contents, styleObj }) {
   return (
-    <div className="flex flex-wrap justify-center gap-[12px]" style={styleObj}>
+    <div className="flex flex-wrap justify-center gap-[12px] web-dev-grid" style={styleObj} web-dev-grid>
       <Link href={`/web/creative-coding`}>
-        <Crazy />
+        <Crazy gridMode={true} />
       </Link>
       <Link
         target="_blank"

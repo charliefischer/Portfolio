@@ -21,6 +21,19 @@ h1 {
   color: rgb(15, 15, 27);
 }
 
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: "InstrumentSans";
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
 p {
   font-family: "InstrumentSans";
   text-align: center;
@@ -59,6 +72,10 @@ svg path {
 .custom-cursor.grow {
   transform: scale(2);
   opacity: 0.7
+}
+
+.web-dev-grid img {
+  max-height: 200px;
 }
 
 @media screen and (min-width: 600px) {

@@ -6,14 +6,14 @@ import {
   halfRotation,
 } from "../../utils/creative-coding-helpers";
 
-export default function Crazy() {
+export default function Crazy({gridMode=false}) {
   useEffect(() => {
     const container = document.querySelector("section.crazy");
     if (document.querySelector("section.crazy path")) return;
 
     const params = {
-      width: 400,
-      height: 400,
+      width: gridMode ? 200 : 400,
+      height: gridMode ? 200 : 400,
     };
 
     const two = new Two(params);
