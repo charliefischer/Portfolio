@@ -29,6 +29,13 @@ export default function WebDevGrid({ contents, styleObj }) {
       >
         <img src="/web-images/ff4.png" className="pointer-events-none" />
       </Link>
+      <Link
+        target="_blank"
+        href={`https://cf-svg-test-site-editor.superhi.hosting/index.html`}
+        style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
+      >
+        <img src="/web-images/super-shapes.gif" className="pointer-events-none" />
+      </Link>
     </div>
   );
 }

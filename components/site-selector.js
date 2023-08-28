@@ -19,6 +19,10 @@ export default function SiteSelector({ illoCmsContent }) {
       if (el === "web") setLeftValue(0);
     }
   };
+  const arrowLeftPostion = hoveredOption && hoveredOption === "illo" ? -10 : 3;
+  const arrowRightPosition =
+    hoveredOption && hoveredOption === "web" ? -10 : 3;
+
   useEffect(() => {
     return () => {
       elementClicked = false;
@@ -26,6 +30,28 @@ export default function SiteSelector({ illoCmsContent }) {
   }, []);
   return (
     <div className="fixed flex flex-col sm:flex-row justify-evenly w-[100%] top-[0]">
+      <img
+        src="icons/arrow.png"
+        width="32px"
+        className="fixed top-[14px] z-[6] transition-all duration-[400ms] mob:hidden sm:block"
+        style={{
+          left: arrowLeftPostion + "%",
+        }}
+        onMouseEnter={() => handleHover("web", -20)}
+        onMouseLeave={() => handleHover()}
+        onClick={() => handleCLick("web")}
+      />
+      <img
+        src="icons/arrow.png"
+        width="32px"
+        className="fixed top-[14px] z-[6] rotate-180 transition-all duration-[400ms] mob:hidden sm:block"
+        style={{
+          right: arrowRightPosition + "%",
+        }}
+        onMouseEnter={() => handleHover("illo", -80)}
+        onMouseLeave={() => handleHover()}
+        onClick={() => handleCLick("illo")}
+      />
       <div
         className={`bg-[#F17B0D] fixed w-[100vw] top-[0] h-[100%] transition-all duration-[400ms]`}
         style={{
