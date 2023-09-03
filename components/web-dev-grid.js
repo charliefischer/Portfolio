@@ -36,6 +36,13 @@ export default function WebDevGrid({ contents, styleObj }) {
       >
         <img src="/web-images/super-shapes.gif" className="pointer-events-none" />
       </Link>
+      <Link
+        target="_blank"
+        href={`/web/three-text`}
+        style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
+      >
+        <img src="/web-images/three-text.png" className="pointer-events-none" />
+      </Link>
     </div>
   );
 }
