@@ -4,6 +4,7 @@ import JobsBoard from "../components/jobs-board";
 import Banner from "../components/banner";
 import SiteSelector from "../components/site-selector";
 import { useEffect } from "react";
+import Navigation from "../components/navigation";
 
 export default function Index({ preview, cmsContent, illoCmsContent }) {
   useEffect(() => {
@@ -27,12 +28,7 @@ export default function Index({ preview, cmsContent, illoCmsContent }) {
     <>
       <Layout preview={preview} colour="orange-main">
         <Banner />
-        <h2
-          className="fixed left-4 z-[1]"
-          id="#title"
-        >
-          Charlie Fischer
-        </h2>
+        <Navigation />
       <SiteSelector illoCmsContent={illoCmsContent} />
       </Layout>
     </>
