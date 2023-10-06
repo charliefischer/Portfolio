@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Navigation(){
   return (
-    <nav className="text-center mt-[12px]">
-      <Link href='/' className="p-[12px]">
-        Return Home
+    <nav className="ml-4">
+      <Link href='/'>
+        <h2>Charlie Fischer</h2>
       </Link>
     </nav>
   )

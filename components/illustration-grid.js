@@ -1,8 +1,12 @@
 import Link from "next/link";
 
-export default function IllustrationGrid({ contents, styleObj }) {
+export default function IllustrationGrid({ contents=[{url: "a"}, {url: "a"}], styleObj, isHorizontal=false }) {
+  let wrapperClasses = "flex flex-wrap justify-center h-min"
+  if(isHorizontal) {
+    wrapperClasses = "flex overflow-scroll illo-grid-horizontal h-min"
+  }
   return (
-    <div className="flex flex-wrap justify-center h-min">
+    <div className={wrapperClasses}>
       {contents?.map((illo) => {
         return (
           <Link
