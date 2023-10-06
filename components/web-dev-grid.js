@@ -2,9 +2,13 @@ import Link from "next/link";
 import Crazy from "./creative-coding/crazy";
 // import esotericEnsembles from "/web-images/esoteric-ensembles.png"
 
-export default function WebDevGrid({ contents, styleObj }) {
+export default function WebDevGrid({ styleObj, isHorizontal=false }) {
+  let wrapperClasses = "flex flex-wrap justify-center gap-[12px] web-dev-grid h-min"
+  if(isHorizontal) {
+    wrapperClasses = "flex gap-[12px] web-dev-grid horizontal h-min overflow-scroll"
+  }
   return (
-    <div className="flex flex-wrap justify-center gap-[12px] web-dev-grid h-min" style={styleObj}>
+    <div className={wrapperClasses} style={styleObj}>
       <Link href={`/web/creative-coding`}>
         <Crazy gridMode={true} />
       </Link>
@@ -46,3 +50,4 @@ export default function WebDevGrid({ contents, styleObj }) {
     </div>
   );
 }
+//

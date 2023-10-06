@@ -2,34 +2,14 @@ import { useEffect, useState } from "react";
 import IllustrationGrid from "./illustration-grid";
 import WebDevGrid from "./web-dev-grid";
 import Link from "next/link";
+import SectionSeparator from "./section-separator";
 let elementClicked = false;
 
 export default function SiteSelector({ illoCmsContent }) {
-  let [leftValue, setLeftValue] = useState(-50);
-  let [hoveredOption, setHoveredOption] = useState(false);
-  const handleHover = (el = false, leftV = -50) => {
-    if (elementClicked) return;
-    setHoveredOption(el);
-    setLeftValue(leftV);
-  };
-  const handleCLick = (el) => {
-    elementClicked = !elementClicked;
-    if (el && hoveredOption === el) {
-      setLeftValue(el === "illo" ? -100 : 0);
-    }
-  };
-  const arrowLeftPostion = hoveredOption && hoveredOption === "illo" ? -10 : 3;
-  const arrowRightPosition =
-    hoveredOption && hoveredOption === "web" ? -10 : 3;
-
-  useEffect(() => {
-    return () => {
-      elementClicked = false;
-    };
-  }, []);
   return (
-    <div className="fixed flex flex-col sm:flex-row justify-evenly w-[100%] top-[0]">
-      <img
+    <>
+      <div className="flex flex-col min-h-screen">
+        {/* <img
         src="icons/arrow.png"
         width="32px"
         className="fixed top-[14px] z-[6] transition-all duration-[400ms] mob:hidden sm:block"
@@ -59,10 +39,12 @@ export default function SiteSelector({ illoCmsContent }) {
           left: leftValue + "%",
           right: leftValue + 100 + "%",
         }}
-      />
-      <div
+      /> */}
+
+        {/* <div
         style={{ left: leftValue + 100 + "%" }}
         className="fixed transition-all duration-[400ms] w-[90%] mx-[5%] mt-[64px] top-[0] mob:hidden sm:block overflow-scroll h-[100%]"
+        onMouseDown={() => handleCLick("illo")}
       >
         <IllustrationGrid contents={illoCmsContent} />
       </div>
@@ -70,11 +52,26 @@ export default function SiteSelector({ illoCmsContent }) {
         style={{
           left: leftValue + "%",
         }}
+        onMouseDown={() => handleCLick("web")}
         className="fixed transition-all duration-[400ms] w-[90%] mx-[5%] mt-[64px] top-[0] mob:hidden sm:block overflow-scroll h-[100%]"
       >
         <WebDevGrid contents={[1, 2, 3]} />
-      </div>
-      <div
+      </div> */}
+        <div className="flex height-[50%] flex-1 items-center">
+          <div className="orient-rl transform rotate-[180deg] text-center text-xl mr-4">
+            Illustrator
+          </div>
+          <IllustrationGrid contents={illoCmsContent} isHorizontal />
+        </div>
+        <SectionSeparator />
+        <div className="flex height-[50%] flex-1 items-center">
+          <div className="orient-rl transform rotate-[180deg] text-center text-xl mr-4">
+            Developer
+          </div>
+          <WebDevGrid contents={[1, 2, 3]} isHorizontal />
+        </div>
+
+        {/* <div
         onMouseEnter={() => handleHover("web", -20)}
         onMouseLeave={() => handleHover()}
         onClick={() => handleCLick("web")}
@@ -92,8 +89,8 @@ export default function SiteSelector({ illoCmsContent }) {
         <Link href={`/illustration`}>
           <h3>Illustrator</h3>
         </Link>
-      </div>
-      <div
+      </div> */}
+        {/* <div
         onMouseEnter={() => handleHover("illo", -80)}
         onMouseLeave={() => handleHover()}
         onClick={() => handleCLick("illo")}
@@ -104,7 +101,8 @@ export default function SiteSelector({ illoCmsContent }) {
         }}
       >
         <a className="h3">Illustrator</a>
+      </div> */}
       </div>
-    </div>
+    </>
   );
 }
