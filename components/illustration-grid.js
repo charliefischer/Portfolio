@@ -5,7 +5,7 @@ export default function IllustrationGrid({ contents=[{url: "a"}, {url: "a"}], st
   let linkClasses = "flex w-[max(300px,33%)] hover:scale-110 transition-transform duration-400 mb-8"
   if(isHorizontal) {
     wrapperClasses = "flex overflow-scroll illo-grid-horizontal h-min"
-    linkClasses = "flex h-[200px] hover:scale-110 transition-transform duration-400 mb-8 shrink-0"
+    linkClasses = "flex h-[min-content] w-[min(400px, 80%)] hover:scale-110 transition-transform duration-400 mb-8 shrink-0"
   }
   
   return (
@@ -19,7 +19,7 @@ export default function IllustrationGrid({ contents=[{url: "a"}, {url: "a"}], st
           >
             <img
               src={illo.navigationImage.url}
-              className="pointer-events-none width-[100%]"
+              className="pointer-events-none max-h-[200px]"
             />
           </Link>
         );
