@@ -9,6 +9,20 @@ export default function WebDevGrid({ styleObj, isHorizontal=false }) {
   }
   return (
     <div className={wrapperClasses} style={styleObj}>
+      <Link
+        target="_blank"
+        href={`https://food-from-4.vercel.app/`}
+        style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
+      >
+        <img src="/web-images/ff4.png" className="pointer-events-none" />
+      </Link>
+      <Link
+        target="_blank"
+        href={`/web/SGNL`}
+        style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
+      >
+        <video src="/web-images/SGNL.mov" className="pointer-events-none" />
+      </Link>
       <Link href={`/web/creative-coding`}>
         <Crazy gridMode={true} />
       </Link>
@@ -25,13 +39,6 @@ export default function WebDevGrid({ styleObj, isHorizontal=false }) {
         style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
       >
         <img src="/web-images/brux.gif" className="pointer-events-none" />
-      </Link>
-      <Link
-        target="_blank"
-        href={`https://food-from-4.vercel.app/`}
-        style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
-      >
-        <img src="/web-images/ff4.png" className="pointer-events-none" />
       </Link>
       <Link
         target="_blank"
