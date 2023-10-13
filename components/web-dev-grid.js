@@ -21,7 +21,7 @@ export default function WebDevGrid({ styleObj, isHorizontal=false }) {
         href={`/web/SGNL`}
         style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
       >
-        <video src="/web-images/SGNL.mov" className="pointer-events-none" />
+        <img src="/web-images/SGNL/home.png" className="pointer-events-none" />
       </Link>
       <Link href={`/web/creative-coding`}>
         <Crazy gridMode={true} />

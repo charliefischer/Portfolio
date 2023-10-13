@@ -13,14 +13,21 @@ export default function SGNL({ preview }) {
           SGNL, creating fashion items with a focus on making women feel safe
           when out.
         </h3>
-        <h3 className="max-w-[80%] mx-auto">
+        <h3 className="max-w-[80%] mx-auto mb-4">
           Using a free default template, I created liquid components and custom
-          layouts to match their desired designs. The videos use placeholder
-          images as waiting on product shots to be completed.
+          layouts to match their desired designs.
         </h3>
-        {/* to amend */}
-        <video src="/web-images/SGNL_home.mov" />
-        <video src="/web-images/SGNL_variants.mov" />
+        <p className="text-left max-w-[80%] mx-auto mb-4">The videos use placeholder
+          images as waiting on product shots to be completed.</p>
+        <div className="max-w-[80%] mx-auto flex flex-col gap-4">
+          <img src="/web-images/SGNL/home.png" />
+          <img src="/web-images/SGNL/toolbar.png" />
+          <img src="/web-images/SGNL/product.png" />
+          <img src="/web-images/SGNL/cart.png" />
+        <a href="https://sgnl-8577.myshopify.com/cart" target="_blank" className="pb-[64px] text-underline mx-auto">
+          SGNL
+        </a>
+        </div>
         <Banner />
       </Layout>
     </>
