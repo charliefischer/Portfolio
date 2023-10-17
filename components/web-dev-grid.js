@@ -42,7 +42,6 @@ export default function WebDevGrid({ styleObj, isHorizontal = false }) {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 484 57"
-          preserveAspectRatio="true"
           fill="none"
           className="header-logo"
           width="100%"
