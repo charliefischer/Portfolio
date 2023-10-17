@@ -16,7 +16,7 @@
 
 h1 {
   font-family: "InstrumentSans";
-  font-size: calc(100vw / 8);
+  font-size: 64px;
   white-space: nowrap;
   color: rgb(15, 15, 27);
 }
@@ -85,6 +85,10 @@ svg path {
 
 .floating-ud {
   animation: object-floating 6.5s infinite ease-in-out alternate;
+}
+
+.hulla-iframe iframe {
+  height: 100% !important;
 }
 
 @keyframes object-floating {
