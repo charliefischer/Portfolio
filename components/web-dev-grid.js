@@ -11,6 +11,13 @@ export default function WebDevGrid({ styleObj, isHorizontal=false }) {
     <div className={wrapperClasses} style={styleObj}>
       <Link
         target="_blank"
+        href={`https://stupendous-pavlova-557b79.netlify.app/`}
+        style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
+      >
+        <img src="/web-images/sship.png" className="pointer-events-none floating-ud" />
+      </Link>
+      <Link
+        target="_blank"
         href={`https://food-from-4.vercel.app/`}
         style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
       >

@@ -83,7 +83,20 @@ svg path {
   cursor: default;
 }
 
-@media screen and (min-width: 640px){
+.floating-ud {
+  animation: object-floating 6.5s infinite ease-in-out alternate;
+}
+
+@keyframes object-floating {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@media screen and (min-width: 640px) {
   * {
     cursor: none;
   }
