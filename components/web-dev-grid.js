@@ -34,6 +34,7 @@ export default function WebDevGrid({ styleObj, isHorizontal = false }) {
       >
         <img src="/web-images/SGNL/home.png" className="pointer-events-none" />
       </Link>
+      // 
       <Link
         href={`/web/hulla-proto`}
         className="my-auto"
