@@ -23,6 +23,16 @@ export default function WebDevGrid({ styleObj, isHorizontal = false }) {
       </Link>
       <Link
         target="_blank"
+        href={`/web/who-was-that`}
+        style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
+      >
+        <img
+          src="/web-images/who-was-that.png"
+          className="pointer-events-none"
+        />
+      </Link>
+      <Link
+        target="_blank"
         href={`https://food-from-4.vercel.app/`}
         style={{ maxWidth: "min(80%, 400px)", height: "min-content" }}
       >
